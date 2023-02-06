@@ -1,5 +1,5 @@
 -- Using the bestbuy database:
-use bestbuy;
+USE bestbuy;
 -- Copy the following and paste into MySql Workbench
 -- find all products
 SELECT * FROM products;
@@ -12,18 +12,18 @@ SELECT * FROM products WHERE price != 11.99;
 -- find all products and sort them by price from greatest to least
 SELECT * FROM products ORDER BY price DESC;
 -- find all employees who don't have a middle initial
-SELECT * FROM employees WHERE middleinitial is NULL;
+SELECT * FROM employees WHERE MiddleInitial is NULL;
 -- find distinct product prices
-SELECT DISTINCT products.price FROM products;
+SELECT DISTINCT price FROM products;
 -- find all employees whose first name starts with the letter ‘j’
 SELECT * FROM employees WHERE firstname LIKE 'j%';
 -- find all Macbooks
-SELECT * FROM products WHERE Name = 'Macbook';
+SELECT * FROM products WHERE Name = "Macbook";
 -- find all products that are on sale
 SELECT * FROM products WHERE onsale = 1;
 -- find the average price of all products
-SELECT AVG (products.price) FROM products; 
+SELECT AVG(price) FROM products; 
 -- find all Geek Squad employees who don't have a middle initial
-SELECT * FROM employees AS e WHERE e.MiddleInitial IS NULL AND e.title = 'Geek Squad';
+SELECT * FROM employees AS e WHERE e.MiddleInitial IS NULL AND e.title = "Geek Squad";
 -- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
-SELECT * FROM products WHERE StockLevel BETWEEN 500 AND 1200 ORDER BY Price;
+SELECT * FROM products WHERE stocklevel BETWEEN 500 AND 1200 ORDER BY price;
